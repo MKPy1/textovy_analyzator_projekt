@@ -72,7 +72,7 @@ if databaze.get(input_name) == input_pass:
 
         # úprava textu - rozdělení a očištění
         words_split = text.split()
-        words_clean = [word.strip(".,!?") for word in words_split]
+        words_clean = [word.strip(".:,!?") for word in text.split() if word.strip(".:,!?") != ""]
 
         for i in words_clean:
             new_dictionary_first[len(i)] = new_dictionary_first.setdefault(len(i), 0) + 1
